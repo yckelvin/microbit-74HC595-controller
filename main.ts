@@ -58,26 +58,27 @@ function open(cellX: number, cellY: number): void {
     updateShiftRegister(data)
 }
 
-//% weight=100 color=#0fbc11 icon=""
+//% weight=100 color=#0fbc11 icon=""  // This is a valid Unicode icon
 namespace HC595 {
     /**
-     * 初始化 74HC595 腳位
-     * @param data 74HC595 的 DATA 腳位
-     * @param clock 74HC595 的 CLOCK 腳位
-     * @param latch 74HC595 的 LATCH 腳位
+     * Initialize 74HC595 pins
+     * @param data 74HC595 DATA pin
+     * @param clock 74HC595 CLOCK pin
+     * @param latch 74HC595 LATCH pin
      */
     //% blockId=hc595_init block="initialize HC595 with DATA %data|CLOCK %clock|LATCH %latch"
     export function initialize(data: DigitalPin, clock: DigitalPin, latch: DigitalPin): void {
-        initPins(data, clock, latch)
+        initPins(data, clock, latch);
     }
 
     /**
-     * 打開指定藥格
-     * @param cellX 星期 (0=星期日, 6=星期六)
-     * @param cellY 時間 (0=早上, 1=中午, 2=晚上)
+     * Open a specific cell
+     * @param cellX Day of the week (0=Sunday, 6=Saturday)
+     * @param cellY Time of day (0=Morning, 1=Afternoon, 2=Evening)
      */
     //% blockId=hc595_open block="open cell at week %cellX|time %cellY"
     export function openCell(cellX: number, cellY: number): void {
-        open(cellX, cellY)
+        open(cellX, cellY);
     }
 }
+
