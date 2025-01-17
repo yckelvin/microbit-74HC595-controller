@@ -1,0 +1,10 @@
+{
+    "name": "74HC595 Controller",
+    "description": "Control 74HC595 shift register to manage 21 cells.",
+    "dependencies": {
+        "device": "*"
+    },
+    "files": [
+        "main.ts"
+    ]
+}
